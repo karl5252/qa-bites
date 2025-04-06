@@ -1,7 +1,7 @@
 ---
 layout: home
 lang: pl
-title: QA Bites 🍪 – Polski
+title: QA Bites – Polski
 ---
 
 <!--h2>DEBUG: Wszystkie posty</h2>

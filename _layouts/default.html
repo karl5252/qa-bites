@@ -1,20 +1,70 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-
-  {%- include head.html -%}
-
+<html lang="{{ page.lang | default: site.lang }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="/assets/main.css">
+    <style>
+      body {
+        background-color: #000;
+        color: #ccc;
+        font-family: 'JetBrains Mono', monospace;
+        margin: 0;
+        padding: 2rem;
+        line-height: 1.6;
+      }
+      a {
+        color: #0ff;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #f0f;
+        text-decoration: underline;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #333;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .logo img {
+        height: 72px;
+      }
+      .logo-text {
+        font-size: 1.5rem;
+        color: #fff;
+      }
+      nav a {
+        margin-left: 1rem;
+        font-weight: bold;
+      }
+      main {
+        max-width: 800px;
+        margin: auto;
+      }
+    </style>
+  </head>
   <body>
-
-    {%- include header.html -%}
-
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
+    <header>
+      <div class="logo">
+        <img src="/assets/images/qabites-logo.png" alt="QA Bites logo">
+        <div class="logo-text">QA Bites</div>
       </div>
+      <nav>
+        <a href="/">🇵🇱</a>
+        <a href="/en/">🇬🇧</a>
+      </nav>
+    </header>
+
+    <main>
+      {{ content }}
     </main>
-
-    {%- include footer.html -%}
-
   </body>
-
 </html>

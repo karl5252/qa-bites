@@ -2,7 +2,7 @@
 layout: home
 lang: en
 permalink: /en/
-title: QA Bites 🍪 – English
+title: QA Bites – English
 ---
 
 <!--h2>DEBUG: All posts</h2>

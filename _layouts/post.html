@@ -1,6 +1,12 @@
 ---
 layout: default
 ---
+{% if page.lang == 'en' %}
+  <a href="/en/" class="home-link">← Home</a>
+{% else %}
+  <a href="/" class="home-link">← Home</a>
+{% endif %}
+
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
@@ -13,6 +19,7 @@ layout: default
       {%- if page.author -%}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
       {%- endif -%}</p>
+	  
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
