@@ -8,7 +8,7 @@ lang: pl
 
 ---
 
-Bez lania wody.
+Bez lania wody o Pythonie.
 
 Python = szybko, czytelnie, potężnie.
 Ty = QA, który chce automatyzować bez migreny.

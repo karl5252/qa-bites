@@ -6,7 +6,7 @@ categories: [QA, Automatyzacja]
 tags: [framework, testy]
 lang: en
 ---
-Let’s skip the poetry and get to the point.
+Let’s skip the poetry and get to the point about Python.
 
 Python = fast, readable, powerful.  
 You = QA trying to automate without losing your mind.  
