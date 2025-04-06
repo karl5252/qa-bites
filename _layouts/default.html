@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang }}">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ page.title }} | {{ site.title }}</title>
-    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/main.css" />
     <style>
       body {
         background-color: #000;
@@ -14,14 +14,17 @@
         padding: 2rem;
         line-height: 1.6;
       }
+
       a {
         color: #0ff;
         text-decoration: none;
       }
+
       a:hover {
         color: #f0f;
         text-decoration: underline;
       }
+
       header {
         display: flex;
         align-items: center;
@@ -29,28 +32,112 @@
         padding-bottom: 2rem;
         border-bottom: 1px solid #333;
       }
+
       .logo {
         display: flex;
         align-items: center;
         gap: 1rem;
       }
+
       .logo img {
         height: 72px;
       }
+
       .logo-text {
         font-size: 1.5rem;
         color: #fff;
       }
+	  /* Top-level wrapper fix */
+	  .language-python.highlighter-rouge {
+  	  background: #111 !important;
+  	  border-radius: 6px;
+  	  padding: 1rem;
+  	  margin-bottom: 2rem;
+  	  border: 1px solid #333;
+  	  overflow-x: auto;
+	  }
+
+	  /* Highlight inside */
+	  .language-python .highlight {
+ 	   background: none !important; /* wywal pastelowy hell */
+ 	   padding: 0 !important;
+ 	   border: none !important;
+	  }
+
+	  /* Code tag */
+	  .language-python code {
+	    background: none;
+ 	   color: #ccc;
+ 	   font-family: 'JetBrains Mono', monospace;
+ 	   font-size: 0.95rem;
+ 	   line-height: 1.5;
+	  }
+
+	  /* Rouge token overrides */
+	  .language-python .k  { color: #f92672; }    /* keyword */
+	  .language-python .nf { color: #66d9ef; }    /* function name */
+	  .language-python .s  { color: #e6db74; }    /* string */
+	  .language-python .n  { color: #a6e22e; }    /* name */
+	  .language-python .o  { color: #f8f8f2; }    /* operator */
+	  .language-python .mi { color: #ae81ff; }    /* number */
+	  .language-python .c1 { color: #75715e; font-style: italic; } /* comment */
+	  .language-python .p  { color: #f8f8f2; }    /* punctuation */
+
+
       nav a {
         margin-left: 1rem;
         font-weight: bold;
       }
+
       main {
         max-width: 800px;
         margin: auto;
       }
+
+      /* Headings */
+      h1, h2, h3, h4, h5, h6 {
+        color: #0ff;
+        font-weight: bold;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      /* Bloki kodu */
+      pre {
+        background-color: #0a0a0a;
+        border: 1px solid #333;
+        color: #ccc;
+        padding: 1rem;
+        overflow-x: auto;
+        border-radius: 6px;
+        margin-bottom: 2rem;
+        font-family: 'JetBrains Mono', monospace;
+      }
+
+      pre code {
+        background: none;
+        padding: 0;
+        color: inherit;
+        font-size: 1rem;
+      }
+
+      code {
+        background-color: #111;
+        color: #0f0;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.95rem;
+      }
+
+      /* Linki w kodzie */
+      code a {
+        color: #0ff;
+        text-decoration: underline;
+      }
     </style>
   </head>
+
   <body>
     <header>
       <div class="logo">

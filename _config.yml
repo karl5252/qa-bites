@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title:  QA Bites 🍪 – z życia testera i nie tylko
+title:  QA Bites – z życia testera i nie tylko
 email: kontakt@qabites.blog
 description: >- # this means to ignore newlines until "baseurl:"
   Blog o automatyzacji, testowaniu, kodowaniu i

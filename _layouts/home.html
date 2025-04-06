@@ -2,6 +2,7 @@
 layout: default
 lang: pl
 ---
+
 <div class="home">
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
@@ -10,42 +11,30 @@ lang: pl
   <nav>
     <a href="/en/">🇬🇧 English</a> | <a href="/">🇵🇱 Polski</a>
   </nav>
-  
+
   {{ content }}
 
-  <!--h3>Debug Info:</h3>
-  <p>Site Locale: {{ site.lang }}</p>
-  <p>site.active_lang: {{ site.active_lang }}</p>
-  <p>Page Locale: {{ page.lang }}</p>
-  <p>Total Posts: {{ site.posts | size }}</p>
-<h2>DEBUG: All docs</h2>
-<ul>
-{% for doc in site.collections['posts'].docs %}
-  <li>{{ doc.path }} — lang: {{ doc.lang }} — title: {{ doc.title }}</li>
-{% endfor %}
-</ul-->
+  {% if page.lang == "en" %}
+    <h2>📝 Latest posts</h2>
+  {% else %}
+    <h2>📝 Najnowsze wpisy</h2>
+  {% endif %}
 
-
-  
-  <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-  <ul class="post-list">
-{% assign posts = site.posts | where: "lang", page.lang %}
-
+  <div class="post-listing">
+    {% assign posts = site.posts | where: "lang", page.lang %}
     {% for post in posts %}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
+      <article class="post-card">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <small class="post-date">{{ post.date | date: "%b %-d, %Y" }}</small>
+        <p class="post-excerpt">
+          {{ post.excerpt | strip_html | truncate: 160 }}
+        </p>
+        <a href="{{ post.url | relative_url }}" class="read-more">
+          {% if page.lang == "en" %}→ Read more{% else %}→ Czytaj dalej{% endif %}
+        </a>
+      </article>
     {% endfor %}
-  </ul>
-  
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+  </div>
+
+  <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 </div>

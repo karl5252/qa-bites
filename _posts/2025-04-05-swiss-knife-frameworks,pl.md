@@ -58,7 +58,8 @@ Czasem **"wystarczająco dobre" narzędzia** są lepsze niż utopijny all-in-one
 
 ---
 
-Myśl sprytnie. Testuj z głową. 🧠🔧
+Bądź sprytny. Testuj z głową. 🧠🔧
 – Karol
+
 
 ---
