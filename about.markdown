@@ -1,18 +1,11 @@
 ---
 layout: page
-title: About
+title: O mnie
+lang: pl
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Cześć! Jestem Karol – QA z pasją do Pythona i budowania narzędzi, które naprawdę coś robią.  
+Na tym blogu znajdziesz wpisy o testowaniu, kodzie, automatyzacji i mojej drodze do zostania devem.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+💡 QA może pisać kod. I to całkiem dobry.
