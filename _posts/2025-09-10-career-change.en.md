@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "New Chapter, New Project, Same Drive"
-date: 2025-09-17 08:00:00 +0200
+date: 2025-09-10 08:00:00 +0200
 categories: [Career]
 tags: [update, personal, SET, JavaScript, Playwright]
 lang: en
